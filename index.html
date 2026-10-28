@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boardly – infinite whiteboard</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<canvas id="c"></canvas>
+<div class="bar" id="top">
+ <input id="nm" value="Untitled board" aria-label="Board name">
+ <span class="sep"></span>
+ <button class="b" id="un" title="Undo (Ctrl+Z)">↶</button><button class="b" id="re" title="Redo (Ctrl+Y)">↷</button>
+ <span class="sep"></span>
+ <button class="b" id="zo" title="Zoom out">−</button><span id="zl">100%</span><button class="b" id="zi" title="Zoom in">+</button><button class="b" id="fit" title="Fit all (Ctrl+0)">⤢</button>
+ <span class="sep"></span>
+ <select id="gm" aria-label="Grid style" title="Grid style (G)"><option value="dots">Dot grid</option><option value="lines">Line grid</option><option value="off">No grid</option></select><select id="gs" aria-label="Grid size" title="Grid size"><option value="10">10 px</option><option value="20">20 px</option><option value="40">40 px</option><option value="50">50 px</option></select><button class="b" id="sn" title="Snap objects to grid">⌗</button>
+ <select id="tpl" aria-label="Templates"><option value="">Templates</option><option value="kanban">Kanban</option><option value="brain">Brainstorm</option><option value="swot">SWOT</option></select>
+ <button class="b" id="js" title="Import / export JSON">{ }</button><button class="b" id="pn" title="Copy board as PNG">🖼</button>
+ <button class="b" id="ca" title="Calibrate cursor">⌖</button><button class="b" id="th" title="Dark / light">◐</button><button class="b" id="cl" title="Clear board">🗑</button>
+</div>
+<div class="bar" id="tools"></div>
+<div class="bar" id="pal"></div>
+<textarea id="ed"></textarea><div id="toast"></div>
+<dialog id="dlg"><b>Board JSON</b><textarea id="jt" spellcheck="false"></textarea><div><button class="b" id="jl">Load</button> <button class="b" id="jc">Copy</button> <button class="b" id="jx">Close</button></div></dialog>
+<script src="app.js"></script></body></html>
